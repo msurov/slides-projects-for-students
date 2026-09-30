@@ -138,12 +138,28 @@
 
         <section data-title="Качение шара по квадратным направляющим">
           <div class="cols">
-            <div>
+            <div style="align-self: center;">
+
+              <div class="box remark">
+                Можно ли решить задачу управления качением шара по <b>квадратным направляющим</b>?
+                <br>
+                В общих чертах алгоритм (теоретического) решения задачи известен. 
+                <div class="title" style="padding-top: 1em;">
+                  Минимальная цель:
+                </div>
+                Найти реализуемую траекторию системы (написать программу для её расчёта), 
+                просчитать силы реакции, условия проскальзывания/отрыва шарика, сделать анимацию.
+                <div class="title" style="padding-top: 1em;">
+                  Идеальный результат:
+                </div>
+                Построить систему управления, сделать эксперимент.
+              </div>
+
               <div class="box note">
-                Данная задача на данный момент решена, 
+                Задача управления "Бабочкой" на данный момент решена, 
                 предложено несколько алгоритмов решения:
                 <br>
-                <ul style="font-size: 10pt; list-style: none; line-height: 1.45;">
+                <ul style="font-size: 10pt; list-style: none; line-height: 1.45; margin-top: 5pt;">
                   <li style="margin-bottom: 0.6em;">
                     M. Surov, O. Sumenkov. <em>Spiking Neuromorphic Control for Periodic Orbits Stabilization in Underactuated Robots: A Greedy Lyapunov-Based Approach.</em> Preprint.
                   </li>
@@ -163,7 +179,14 @@
                     M. Surov et al. <em>Case study in non-prehensile manipulation: Planning and orbital stabilization of one-directional rollings for the 'Butterfly' robot.</em> ICRA, 2015.
                   </li>
                 </ul>
-                </div>
+              </div>
+
+            </div>
+            <div>
+              <div class="cols" style="margin-left: 1rem;">
+                <img style="width: 300px;" src="assets/square-plates.jpg" alt="square-plates">
+                <img style="width: 300px;" src="assets/square-plates-1.jpg" alt="square-plates">
+              </div>
               <div class="box issue">
                 <div class="title">Какие работы предстоит выполнить:</div>
                 <ul>
@@ -173,26 +196,6 @@
                   <li>программирование, </li>
                   <li>проведение экспериментов на лабораторной установке.</li>
                 </ul>
-              </div>
-            </div>
-            <div>
-              <div class="cols" style="margin-left: 1rem;">
-                <img style="width: 300px;" src="assets/square-plates.jpg" alt="square-plates">
-                <img style="width: 300px;" src="assets/square-plates-1.jpg" alt="square-plates">
-              </div>
-              <div class="box remark">
-                Можно ли решить задачу управления качением шара по <b>квадратным направляющим</b>?
-                <br>
-                В общих чертах алгоритм (теоретического) решения задачи известен. 
-                <div class="title" style="padding-top: 1em;">
-                  Минимальная цель:
-                </div>
-                Найти реализуемую траекторию системы (написать программу для её расчёта), 
-                просчитать силы реакции, условия проскальзывания/отрыва шарика, сделать анимацию.
-                <div class="title" style="padding-top: 1em;">
-                  Идеальный результат:
-                </div>
-                Построить систему управления, сделать эксперимент.
               </div>
             </div>
           </div>
@@ -228,7 +231,7 @@
             <!-- col 3 -->
             <div style="flex: 0.4">
               <div class="video-frame" style="width: 100%;">
-                <video src="assets/ball-on-table.mp4" controls autoplay muted loop playsinline class="video"></video>
+                <video src="assets/ball-on-table-2.mp4" controls autoplay muted loop playsinline class="video"></video>
               </div>
 
               <div class="box issue">
@@ -310,7 +313,50 @@
               </div>
 
             </div>
+
           </div>
+        </section>
+
+        <section data-title="Маятник Фуруты">
+
+          <div class="cols">
+            <!-- col 1 -->
+            <div style="align-self: center; flex: 0.75;">
+              <div class="regular">
+                <p style="font-size: x-large;">Маятниковая система для исследования алгоритмов управления</p>
+                Два звена: первое приводится во вращение мотором постоянного тока, второе &#8212; вращается свободно.
+                <br>
+                Установлены два энкодера (измеряют углы поворота звеньев).
+                <br>
+                Двигатель постоянного тока и силовая электроника, позволяющая стабилизировать ток или напряжение в цепи двигателя.
+                <br>
+                Задачи управления:
+                <br>
+                <ul>
+                  <li>поднять маятник из устойчивого нижнего в неустойчивое верхнее положеие,</li>
+                  <li>разработать закону управления для стабилизации маятника в неустойчивом положении</li>
+                  <li>разработать закону управления для стабилизации периодического движения маятников.</li>
+                </ul>
+              </div>
+              <div class="box issue">
+                <div class="title">Какие работы предстоит выполнить:</div>
+                <ul>
+                  <li>подключить двигатель, датчики к микроконтроллеру,</li>
+                  <li>проверить корректность работы оборудования,</li>
+                  <li>выполнить идентификацию параметров системы,</li>
+                  <li>выполнить эксперименты по траекторному управлению или стабилизации в положении равновесия.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- col 2 -->
+            <div style="flex: 0.25;">
+
+              <div class="video-frame" style="width: 100%;">
+                <video src="assets/furuta-2.mp4" controls autoplay muted loop playsinline class="video"></video>
+              </div>
+            </div>
+
         </section>
 
 			</div>
