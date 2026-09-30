@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Темы научных работ для магистрантов</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="stylesheet" href="reveal/dist/reveal.css" />
+		<link rel="stylesheet" href="reveal/dist/theme/white.css" id="theme" />
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="robotanim.css">
+
+  </head>
+
+	<body>
+
+    <div id="slide-header" class="slide-header">
+      <iframe
+        src="sirius-logo.html?scale=1.1&basecolor=%234040F0&hicolor=%238080FF"
+        width="60pt"
+        height="50pt"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+      <div class="subtitle" id="slide-subtitle">##</div>
+    </div>
+
+    <div style="position: fixed; right: 10pt; top: 5pt;">
+      <img style="width: 200px;" src="assets/header_logo_new-1.svg" alt="IFAC-logo">
+    </div>
+
+    <div class="slide-foot">
+      <div style="display: flex; gap: 1.5rem; align-items: center">
+        <div class="robot">
+          <div class="antenna left"></div>
+          <div class="antenna right"></div>
+          <div class="leg left"></div>
+          <div class="leg right"></div>
+          <div class="arm left"></div>
+          <div class="head"></div>
+          <div class="nose"></div>
+          <div class="eye"></div>
+          <div class="body"></div>
+          <div class="arm right"></div>
+        </div>
+        <div>
+          <div class="title">Темы научных работ</div>
+          <div class="author">
+            М. О. Суров
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="slides">
+
+        <section data-title="">
+          <h1>
+            Темы научных работ для магистрантов
+          </h1>
+
+          <div class="cols" style="margin-top: 100pt;">
+
+            <div style="flex: 0.6; align-self: center;">
+              <div style="margin-left: 50pt;">
+                <div class="author" style="margin-top: 12pt; margin-bottom: 12pt; text-align: left;">
+                  Максим Олегович Суров<br>
+                  <a class="email">&#9993 surov.mo@talantiuspeh.ru</a>
+                </div>
+              </div>
+              <div class="cols">
+                <div style="flex: 0.2">
+                  <img style="width: 80px;" src="assets/sirius-logo.svg" alt="sirius-logo">
+                </div>
+                <div style="flex: 0.8; text-align: left; align-self: center; font-weight: 600; color: #3295b2ff;">
+                  <div style="font-size: 20pt;">Сириус</div>
+                  <div style="font-size: 12pt;">
+                    научно-технологический 
+                    <br>
+                    университет
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-title="Управление качением шара вдоль плоской кривой">
+
+          <div class="cols">
+            <div style="flex: 0.8">
+              <div class="box comment">
+                <div class="title">
+                  Робот "Бабочка":
+                </div>
+                Мяч свободно катится вдоль двух параллельных направляющих, имеющих форму восьмёрки.
+                <br>
+                Направляющие приводятся во вращением мотором постоянного тока.
+                Система технического зрения измеряет положение мяча в реальном времени.
+              </div>
+              <div class="box comment">
+                <div class="title">
+                  Задача управления:
+                </div>
+                Необходимо создать алгоритм управления, 
+                который принимая сигналы от камеры и других датчиков робота
+                будет подавать такой управляющий сигнал на двигатель,
+                что мячик будет катиться вдоль направляющих без отрыва и проскальзывания.
+              </div>
+              <div class="box note">
+                <div class="title">
+                  Подход к решению:
+                </div>
+                Для решением задачи управления движением требуется 
+                найти <em>реализуемую траекторию</em> робота
+                и построить обратную связь, обеспечивающую следование 
+                вдоль этой траектории.
+              </div>
+            </div>
+
+            <div style="align-self: center; flex: 1.2">
+              <div class="video-frame" style="width: 100%;">
+                <video src="assets/butterfly-sliding-control.mp4" controls autoplay muted loop playsinline class="video"></video>
+                <div class="video-credit">
+                  <a href="https://youtu.be/v6cUUEJ9Aaw">youtu.be/v6cUUEJ9Aaw</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-title="Качение шара по квадратным направляющим">
+          <div class="cols">
+            <div>
+              <div class="box note">
+                Данная задача на данный момент решена, 
+                предложено несколько алгоритмов решения:
+                <br>
+                <ul style="font-size: 10pt; list-style: none; line-height: 1.45;">
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov, O. Sumenkov. <em>Spiking Neuromorphic Control for Periodic Orbits Stabilization in Underactuated Robots: A Greedy Lyapunov-Based Approach.</em> Preprint.
+                  </li>
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov, L. Freidovich. <em>Sliding Mode Control and Subspace Stabilization Methodology for the Orbital Stabilization of Periodic Trajectories.</em> IFAC, 2026.
+                  </li>
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov, O. Sumenkov. <em>Lyapunov redesign of perturbed periodic LTV systems with experimental validation.</em> Nonlinear Analysis Hybrid Systems, 2026.
+                  </li>
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov. <em>Sliding-Mode-Based Control Design for the Butterfly Robot.</em> TCST, 2025.
+                  </li>
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov, M. Grigorov. <em>Orbital Stabilization and Time Synchronization of Unstable Periodic Motions in Underactuated Robots.</em> ICRA, 2026.
+                  </li>
+                  <li>
+                    M. Surov et al. <em>Case study in non-prehensile manipulation: Planning and orbital stabilization of one-directional rollings for the 'Butterfly' robot.</em> ICRA, 2015.
+                  </li>
+                </ul>
+                </div>
+              <div class="box issue">
+                <div class="title">Какие работы предстоит выполнить:</div>
+                <ul>
+                  <li>расчёт динамики (уравнений движения) робота, </li>
+                  <li>численные методы решения дифференциальных уравнений,</li>
+                  <li>качественный анализ решений,</li>
+                  <li>программирование, </li>
+                  <li>проведение экспериментов на лабораторной установке.</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="cols" style="margin-left: 1rem;">
+                <img style="width: 300px;" src="assets/square-plates.jpg" alt="square-plates">
+                <img style="width: 300px;" src="assets/square-plates-1.jpg" alt="square-plates">
+              </div>
+              <div class="box remark">
+                Можно ли решить задачу управления качением шара по <b>квадратным направляющим</b>?
+                <br>
+                В общих чертах алгоритм (теоретического) решения задачи известен. 
+                <div class="title" style="padding-top: 1em;">
+                  Минимальная цель:
+                </div>
+                Найти реализуемую траекторию системы (написать программу для её расчёта), 
+                просчитать силы реакции, условия проскальзывания/отрыва шарика, сделать анимацию.
+                <div class="title" style="padding-top: 1em;">
+                  Идеальный результат:
+                </div>
+                Построить систему управления, сделать эксперимент.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-title="Задача определения положения и ориентации шара">
+          <div class="cols">
+
+            <!-- col 1 -->
+            <div class="regular" style="flex: 0.38; align-self: center;  ">
+              <p style="font-size: x-large;">
+                Качение шара по вращающемуся столу
+              </p>
+              У данной системы существуют ограниченные траектории.
+              Интересные математические свойства &#8212; наличие первых интегралов, 
+              неуправляемость. Требуется экспериментальная проверка теории. 
+              
+              <p style="font-size: x-large;">
+                Разработка измерительной системы
+              </p>
+              Для этого необходимо разработать <b>систему технического зрения</b>, 
+              которая измеряет в каждый момент времени
+              <br>
+              <ul>
+                <li>положение шара,</li>
+                <li>ориентацию шара,</li>
+                <li>скорость шара,</li>
+                <li>угловую скорость шара.</li>
+              </ul>
+
+            </div>
+
+            <!-- col 3 -->
+            <div style="flex: 0.4">
+              <div class="video-frame" style="width: 100%;">
+                <video src="assets/ball-on-table.mp4" controls autoplay muted loop playsinline class="video"></video>
+              </div>
+
+              <div class="box issue">
+                <div class="title">Какие работы предстоит выполнить:</div>
+                <ul>
+                  <li>описать геометрию сцены, преобразования координат (линейная алгебра, аналитическая геометрия) </li>
+                  <li>задача обработки изображений (фильтрация сигналов, численные методы), </li>
+                  <li>программирование, </li>
+                  <li>проведение экспериментов на лабораторной установке.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- col 2 -->
+            <div style="flex: 0.22">
+              <div class="video-frame" style="width: 100%;">
+                <video src="assets/Ball rolling on accelerating saddle.mp4" controls autoplay muted loop playsinline class="video"></video>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section data-title="Задача траекторного управления">
+              
+          <div class="cols">
+            <!-- col 1 -->
+            <div class="regular" style="align-self: center;">
+              <div style="font-size: x-large; line-height: 1.2; margin-bottom: 10pt;">
+                Метод построения алгоритма управления в задаче следования по заданной траектории.
+              </div>
+              Метод основан на рассмотрении динамики робота в некоторых новых координатах (определяются в окрестности заданной траектории).
+              <br>
+              Существует множество способов определения локальных координат. Возникает вопрос: <em>какие координаты в каких случаях лучше использовать?</em>
+              <br>
+              <br>
+              Интересно применить метод к различным системам и получить результаты о качестве управления (устойчивости к возмущениям, размеру области устойчивости):
+              <br>
+              <ul>
+                <li>маятниковые системы &#8212; маятник Фуруты, двойной математический маятник и другие аналогиче системы,</li>
+                <li>колёсные роботы,</li>
+                <li>летающие роботы</li>
+              </ul>
+              Метод довольно универсальный и применим к управлению любыми роботами.
+
+              <div class="box note">
+                Публикации по теме:
+                <br>
+                <ul style="font-size: 10pt; list-style: none; line-height: 1.45;">
+                  <li style="margin-bottom: 0.6em;">
+                    M. Surov et. al. <em>Constructing Transverse Coordinates for Orbital Stabilization of Periodic Trajectories.</em> CDC 2020.
+                  </li>
+                </ul>
+                </div>
+
+            </div>
+
+            <!-- col 2 -->
+            <div>
+
+              <div class="video-frame" style="width: 100%;">
+                <video src="assets/car-trailers.mp4" controls autoplay muted loop playsinline class="video"></video>
+                <div class="caption">
+                  Движение тягача с прицепами задним ходом по заданной траектории. 
+                  <br>
+                  Для расчёта обратной связи используется метод трансверсальной линеаризации.
+                </div>
+              </div>
+              
+              <div class="box issue">
+                <div class="title">Какие работы предстоит выполнить:</div>
+                <ul>
+                  <li>динамика системы в различных координатах,</li>
+                  <li>расчёт стабилизирубщей обратной связи (численное решение дифференциальных уравнений),</li>
+                  <li>моделирование замкнутой системы,</li>
+                  <li>проведение экспериментов.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+			</div>
+		</div>
+
+    <div class="page-number" id="page-number">1 / 1</div>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/dist/plugin/math.js"></script>
+
+		<script>
+			Reveal.initialize({
+        // Common widescreen resolution (16:9)
+        width: 1280,
+        height: 720,
+
+        margin: 0.03,
+
+        // Optional: Adjust scaling limits if needed
+        minScale: 0.2,
+        maxScale: 2.0,
+        
+				history: true,
+				transition: 'linear',
+				mathjax4: {
+					tex: {
+						inlineMath: [['$', '$'], ['\\(', '\\)']],
+						displayMath: [['$$', '$$'], ['\\[', '\\]']],
+					},
+					options: {
+						skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+					},
+					output: {
+						font: 'mathjax-stix2',
+						displayOverflow: 'linebreak',
+						linebreaks: {             // options for when overflow is linebreak
+							inline: true,              // true for browser-based breaking of inline equations
+							width: '100%',             // a fixed size or a percentage of the container width
+							lineleading: .2,           // the default lineleading in em units
+							LinebreakVisitor: null     // The LinebreakVisitor to use
+						}
+					}
+				},
+				plugins: [ RevealMath.KaTeX ],
+			});
+
+      function countSections() {
+        // count top-level sections only (not vertical stacks), emulate visible slides count
+        const secs = Array.from(document.querySelectorAll('.reveal .slides > section'));
+        // include vertically nested sections: flatten
+        let count = 0;
+        secs.forEach(s => {
+          const children = s.querySelectorAll('section');
+          if (children.length) {
+            count += children.length;
+          } else {
+            count +=1;
+          }
+        });
+        return count;
+      }
+
+      // Helper to update page number and subtitle
+      function updateStatus() {
+        const indices = Reveal.getIndices();
+        const total = countSections();
+
+        // Compute linear index (1-based): horizontal index plus vertical offset
+        // Reveal offers getTotalSlides() but not in all builds; compute manually
+        const horizontal = indices.h || 0;
+        const vertical = indices.v || 0;
+
+        // Create a simple mapping: iterate all top-level sections and accumulate
+        const tops = Array.from(document.querySelectorAll('.reveal .slides > section'));
+        let linearIndex = 0;
+
+        for(let i=0; i < tops.length; i++){
+          const nested = tops[i].querySelectorAll('section');
+          if(nested.length){
+            if(i < horizontal) linearIndex += nested.length;
+            else if(i === horizontal) linearIndex += (vertical + 1);
+          } else {
+            if(i < horizontal) linearIndex += 1;
+            else if(i === horizontal) linearIndex += 1; // This is okay, but the logic is slightly clunky
+          }
+        }
+
+        if (linearIndex === 0) linearIndex = 1; // fallback
+
+        // Update DOM
+        const badge = document.getElementById('page-number');
+        badge.textContent = linearIndex + ' / ' + total;
+
+        // Update slide subtitle from the slide's h2 or data-title
+        const current = Reveal.getCurrentSlide();
+        let label = '';
+        if(current) {
+          const h2 = current.querySelector('h2');
+          if(current.dataset && current.dataset.title) {
+            label = current.dataset.title;
+          } else if (h2) {
+            label = h2.textContent.trim();
+          }
+        }
+
+        if (label) {
+          document.getElementById('slide-subtitle').textContent = label;
+          document.getElementById('slide-header').style.display = "flex";
+        } else {
+          document.getElementById('slide-subtitle').textContent = '';
+          document.getElementById('slide-header').style.display = "none";
+        }
+      }
+
+      Reveal.on('ready', updateStatus);
+      Reveal.on('slidechanged', updateStatus);
+      Reveal.on('fragmentshown', updateStatus);
+
+		</script>
+	</body>
+</html>
